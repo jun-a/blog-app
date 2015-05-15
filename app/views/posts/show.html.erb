@@ -1,0 +1,17 @@
+<h1>記事</h1>
+
+<p>title:</p> <h1> <%= @post.title %> </h1>
+
+<p>content:</p> <h1> <%= @post.content %> </h1>
+
+<% if @category_name %>
+  <p><b>category</b> <%= @category_name %></p>
+<% end %>
+
+<% if @tag_name %>
+  <p><b>Tag</b> <%= @tag_name %></p>
+<% end %>
+
+<%= link_to '編集', edit_post_path(@post) %> |
+
+<%= link_to 'back', posts_path %> <br /> 

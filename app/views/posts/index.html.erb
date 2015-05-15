@@ -1,0 +1,15 @@
+<h1>記事一覧</h1>
+
+<% @post.each do |post|  %>
+
+	<h1> <%= post.title %> </h1>
+
+	<p>content:</p> <p> <%= post.content %> </p>
+
+	<%= link_to '編集', edit_post_path(post) %> 
+	<%= link_to '表示', post_path(post) %>
+	<%= link_to '削除', post_path(post), method: 
+	'delete' , data: { confirm: '本当によろしいですか？' } %> <br />
+
+	
+<% end -%>

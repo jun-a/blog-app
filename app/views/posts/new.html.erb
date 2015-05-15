@@ -1,0 +1,26 @@
+<h1>新規投稿</h1>
+
+<%= form_for @post do |f| %>
+
+  
+  <%= f.label :title  %>
+  <%= f.text_field :title %>
+  
+
+  
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  
+  <%= f.label :post_date %>
+  <%= f.datetime_select :post_date, :use_month_numbers => true %>
+  
+  
+  <%= f.submit "新規投稿" %>
+  
+<% end %>
+
+<%= render :template => 'category_form' %>
+<%= render :template => 'tags_form' %>
+<!--
+    categoryとtagのパーシャルを導入
+-->

@@ -1,0 +1,20 @@
+<p><label for="post_tag_id">Tag</label><br/>
+<%= collection_select(:post, :tag_id, @tags, :id, :name) %></p>
+<!-->
+<%= form_for([@post, @post.category.build]) do |f| %>
+
+
+<p>
+	<%= f.label :name %> <br>
+	<%= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :body %> <br>
+	<%= f.text_field :body %>
+</p>
+
+<p>
+	<%= f.submit %>
+</p>
+
+<% end -%>
